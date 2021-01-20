@@ -14,6 +14,8 @@ $(function () {
           });
     })
 })
+
+
 // 封装获取函数
 function getUserinfo() {
     // 发送ajax请求
@@ -33,6 +35,8 @@ function getUserinfo() {
 function renderAvatar(user) {
     // 获取用户名 用来渲染欢迎词
     var name = user.nickname || user.username
+    console.log(name)
+    console.log(user)
     $('.welcome').html('欢迎&nbsp;&nbsp;' + name);
     // 按需渲染头像
     if (user.user_pic !== null) {
